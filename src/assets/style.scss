@@ -1,0 +1,80 @@
+$pcolor: orange !default;
+$rcolor: #e91e63 !default;
+$scolor: #673ab7 !default;
+
+.vue-cms * {
+    font-family: 'Open Sans', ;
+}
+.vue-cms-btn {
+    background: $pcolor;
+    border: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+    &.primary {
+        background: $pcolor;
+    }
+    &.secondary {
+        background: $scolor;
+    }
+    &.danger {
+        background: $rcolor;
+    }
+    &.small {
+        font-size: 12px;
+    }
+}
+
+.vue-cms-btn-icon {
+    background: $pcolor;
+    border: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    &:focus {
+        outline: none;
+    }
+    &.primary {
+        background: $pcolor;
+    }
+    &.secondary {
+        background: $scolor;
+    }
+    &.danger {
+        background: $rcolor;
+    }
+}
+
+.vue-cms-input {
+    background: #ffffff;
+    border: 0;
+    padding: 12px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 10px;
+    &.bordered {
+        border: 1px solid #2f2f2f;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.vue-cms.editor {
+    .has-focus {
+        border-radius: 3px;
+        -webkit-box-shadow: 0 0 0 3px rgba(62,164,255,.9);
+        box-shadow: 0 0 0 3px rgba(62,164,255,.9);
+    }
+}
