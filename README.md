@@ -4,6 +4,12 @@
 npm i @jundell/vue-menu-cms
 ```
 
+### Vue Menu CMS requires node-sass and sass-loader
+
+```
+npm i --save-dev node-sass sass-loader
+```
+
 ### Markup
 ```
 <template>
