@@ -2,7 +2,8 @@
     <div class="vue-cms-menu-fields">
         <input v-model="field.title" placeholder="Enter Menu Name" class="vue-cms-input" />
         <input v-model="field.slug" placeholder="Enter slug / url" class="vue-cms-input" />
-        <input v-model="field.target" placeholder="Enter url target - optional" class="vue-cms-input" />
+        <input v-model="field.attrs" placeholder="Enter Menu Attributes" class="vue-cms-input" />
+        <small>Separated by comma ex: target=_blank,id=my-menu-id,class=my-menu-classname</small>
     </div>
 </template>
 <script>
