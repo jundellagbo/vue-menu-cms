@@ -1,12 +1,12 @@
 <template>
-  <div class="vue-cms">
+  <div class="vue-menu-cms-">
     <vue-cms-menu-nested :menus="tree.menus" @removeField="(orderKey) => removeField(orderKey)" />
   </div>
 </template>
 
 <script>
 import VueCmsMenuNested from "./MenuCms/MenuCmsNested.vue";
-import { menuObj } from './../helpers/menu'
+import { menuObj } from './helpers/menu'
 export default {
     name: 'vue-cms-menu-component',
     props: {

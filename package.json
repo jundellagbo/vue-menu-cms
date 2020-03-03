@@ -1,7 +1,6 @@
 {
-  "name": "vue-cms",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@jundell/vue-menu-cms",
+  "version": "0.1.5",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -42,5 +41,24 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jundellagbo/vue-menu-cms.git"
+  },
+  "keywords": [
+    "CMS",
+    "Menu",
+    "Vue",
+    "Vue",
+    "Content"
+  ],
+  "author": "Jundell Agbo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jundellagbo/vue-menu-cms/issues"
+  },
+  "homepage": "https://github.com/jundellagbo/vue-menu-cms#readme"
 }

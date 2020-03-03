@@ -9,7 +9,7 @@
 </template>
 <script>
 import './assets/style.scss'
-import VueMenuCms from './components/MenuCms.vue'
+import VueMenuCms from './MenuCms.vue'
 import { menuObj } from './helpers/menu'
 export default {
   components: {

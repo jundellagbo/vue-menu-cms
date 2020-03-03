@@ -8,7 +8,11 @@
 </template>
 <script>
 export default {
-  props: ['field']  
+  props: {
+    field: {
+      type: Object
+    }
+  }  
 }
 </script>
 <style lang="scss" scoped>

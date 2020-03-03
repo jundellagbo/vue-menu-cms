@@ -1,24 +1,83 @@
-# vue-cms
+# Vue Menu CMS
 
-## Project setup
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+npm i @jundell/vue-menu-cms
 ```
 
-### Compiles and minifies for production
+### Markup
 ```
-npm run build
+<template>
+    <div>
+        <vue-menu-cms v-model="tree" />
+        <pre>
+        {{ tree }}
+        </pre>
+    </div>
+</template>
+<script>
+import '@jundell/vue-menu-cms/src/assets/style.scss';
+import VueMenuCms from '@jundell/vue-menu-cms/src/MenuCms.vue';
+export default {
+  components: {
+    VueMenuCms
+  },
+  data: () => ({
+      tree: {
+          menus: [
+            {
+                title: ``,
+                slug: ``,
+                attrs: ``,
+                menus: [],
+                order: Date.now()
+            }
+          ]
+      }
+  })
+}
+</script>
 ```
 
-### Lints and fixes files
+also works with Nuxt.js plugins
+
+
 ```
-npm run lint
+vue-menu-cms.js
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+import Vue from 'vue';
+import '@jundell/vue-menu-cms/src/assets/style.scss';
+import VueMenuCms from '@jundell/vue-menu-cms/src/MenuCms.vue';
+
+Vue.component('VueMenuCms', VueMenuCms);
+```
+
+------
+
+```
+nuxt.config.js
+```
+
+```
+plugins: [
+    { src: 'myplugin-dir/vue-menu-cms', ssr: false }
+]
+```
+
+### Overide Variables
+
+```
+variables.scss
+```
+
+```
+$pcolor: red;
+$rcolor: grey;
+$scolor: blue;
+```
+
+```
+import 'variables.scss';
+import '@jundell/vue-menu-cms/src/assets/style.scss';
+```
