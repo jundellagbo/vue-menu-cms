@@ -2,7 +2,6 @@
   <draggable class="vue-cms-menu-dragarea" tag="ul" :list="menus" :group="{ name: 'g1' }" v-bind="dragOptions">
     <li v-for="(el, index) in menus" :key="el.order">
         <menu-fields :field="el" />
-        <small class="vue-cms-menu-note" v-if="issub">Note: Removing the parent will remove the children.</small>
         <button v-if="!(!issub && index==0)" class="vue-cms-btn danger small btn-remove" @click="$emit('removeField', el.order)">Remove Field</button>
         <vue-cms-menu-nested-draggable :menus="el.menus" :issub="true" class="submenus" @removeField="orderKey => $emit('removeField', orderKey)"  />
     </li>

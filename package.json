@@ -1,6 +1,6 @@
 {
   "name": "@jundell/vue-menu-cms",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -52,7 +52,7 @@
     "menu",
     "vue",
     "content",
-    "vavigations",
+    "navigations",
     "links"
   ],
   "author": "Jundell Agbo",
