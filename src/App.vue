@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <button @click="$refs['menu-cms'].addMenu()">add menu</button>
-    <vue-menu-cms ref="menu-cms" v-model="tree" />
+    <button @click="addMenu">add menu</button>
+    <vue-menu-cms ref="menucms" v-model="tree" />
     <pre>
       {{tree}}
     </pre>
@@ -10,15 +10,28 @@
 <script>
 import './assets/style.scss'
 import VueMenuCms from './MenuCms.vue'
-import { menuObj } from './helpers/menu'
+
+const treeObject = () => ({
+  title: ``,
+  slug: ``,
+  attrs: ``,
+  menus: [],
+  order: Date.now()
+})
+
 export default {
   components: {
     VueMenuCms
   },
   data: () => ({
     tree: {
-      menus: [menuObj()]
+      menus: [treeObject()]
     }
-  })
+  }),
+  methods: {
+    addMenu() {
+      this.$refs.menucms.addMenu()
+    }
+  }
 }
 </script>

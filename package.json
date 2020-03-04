@@ -1,14 +1,15 @@
 {
   "name": "@jundell/vue-menu-cms",
-  "version": "0.1.6",
+  "version": "0.1.9",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@tinymce/tinymce-vue": "^3.2.0",
     "core-js": "^3.6.4",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
     "vue": "^2.6.11",
     "vue-codemirror": "^4.0.6",
     "vuedraggable": "^2.23.2"
@@ -20,8 +21,6 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
-    "node-sass": "^4.13.1",
-    "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
@@ -49,11 +48,12 @@
     "url": "git+https://github.com/jundellagbo/vue-menu-cms.git"
   },
   "keywords": [
-    "CMS",
-    "Menu",
-    "Vue",
-    "Vue",
-    "Content"
+    "cms",
+    "menu",
+    "vue",
+    "content",
+    "vavigations",
+    "links"
   ],
   "author": "Jundell Agbo",
   "license": "ISC",

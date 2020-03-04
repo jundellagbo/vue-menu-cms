@@ -6,7 +6,15 @@
 
 <script>
 import VueCmsMenuNested from "./MenuCms/MenuCmsNested.vue";
-import { menuObj } from './helpers/menu'
+
+const treeObject = () => ({
+  title: ``,
+  slug: ``,
+  attrs: ``,
+  menus: [],
+  order: Date.now()
+})
+
 export default {
     name: 'vue-cms-menu-component',
     props: {
@@ -17,7 +25,7 @@ export default {
         value: {
             type: Object,
             default: () => ({ 
-                menus: [menuObj()]
+                menus: [treeObject()]
             })
         }
     },
@@ -26,7 +34,7 @@ export default {
     },
     methods: {
         addMenu() {
-            this.tree.menus.push(menuObj())
+            this.tree.menus.push(treeObject())
         },
         removeField(orderKey) {
             this.removeTree(this.tree, orderKey)

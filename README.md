@@ -4,17 +4,13 @@
 npm i @jundell/vue-menu-cms
 ```
 
-### Vue Menu CMS requires node-sass and sass-loader
-
-```
-npm i --save-dev node-sass sass-loader
-```
-
 ### Markup
+
 ```
 <template>
     <div>
-        <vue-menu-cms v-model="tree" />
+        <button @click="addMenu">Add Menu</button>
+        <vue-menu-cms ref="menucms" v-model="tree" />
         <pre>
         {{ tree }}
         </pre>
@@ -23,23 +19,27 @@ npm i --save-dev node-sass sass-loader
 <script>
 import '@jundell/vue-menu-cms/src/assets/style.scss';
 import VueMenuCms from '@jundell/vue-menu-cms/src/MenuCms.vue';
+const treeObject = () => ({
+  title: '',
+  slug: '',
+  attrs: '',
+  menus: [],
+  order: Date.now()
+})
 export default {
   components: {
     VueMenuCms
   },
   data: () => ({
       tree: {
-          menus: [
-            {
-                title: ``,
-                slug: ``,
-                attrs: ``,
-                menus: [],
-                order: Date.now()
-            }
-          ]
+          menus: [treeObject()]
       }
-  })
+  }),
+  methods: {
+    addMenu() {
+      this.$refs.menucms.addMenu()
+    }
+  }
 }
 </script>
 ```
@@ -71,7 +71,7 @@ plugins: [
 ]
 ```
 
-### Overide Variables
+### Overide SCSS Variables
 
 ```
 variables.scss
