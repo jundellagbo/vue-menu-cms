@@ -19,20 +19,21 @@ npm i @jundell/vue-menu-cms
 <script>
 import '@jundell/vue-menu-cms/src/assets/style.scss';
 import VueMenuCms from '@jundell/vue-menu-cms/src/MenuCms.vue';
-const treeObject = () => ({
-  title: '',
-  slug: '',
-  attrs: '',
-  menus: [],
-  order: Date.now()
-})
 export default {
   components: {
     VueMenuCms
   },
   data: () => ({
       tree: {
-          menus: [treeObject()]
+          menus: [
+            {
+              title: '',
+              slug: '',
+              attrs: '',
+              menus: [],
+              order: Date.now()
+            }
+          ]
       }
   }),
   methods: {
