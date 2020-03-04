@@ -1,11 +1,8 @@
 # Vue Menu CMS
 
-```
-npm i @jundell/vue-menu-cms
-```
+A content management system for menu.
 
 ![](https://raw.githubusercontent.com/jundellagbo/vue-menu-cms/master/cms.gif)
-
 
 ### Markup
 
@@ -48,11 +45,13 @@ export default {
 </script>
 ```
 
+------
+
 also works with Nuxt.js plugins
 
 
 ```
-vue-menu-cms.js
+plugins/vue-menu-cms.js
 ```
 
 ```
@@ -70,21 +69,21 @@ nuxt.config.js
 ```
 
 ```
-plugins: [
-    { src: 'myplugin-dir/vue-menu-cms', ssr: false }
-]
+module.exports = {
+  plugins: [
+      { src: '~/plugins/vue-menu-cms', ssr: false }
+  ]
+}
 ```
+
+------
 
 ### Overide SCSS Variables
 
 ```
-variables.scss
-```
-
-```
-$pcolor: red;
-$rcolor: grey;
-$scolor: blue;
+$pcolor: red; // primary
+$rcolor: grey; // red
+$scolor: blue; // secondary
 ```
 
 ```
