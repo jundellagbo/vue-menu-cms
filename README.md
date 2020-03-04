@@ -6,6 +6,7 @@ npm i @jundell/vue-menu-cms
 
 ![](https://raw.githubusercontent.com/jundellagbo/vue-menu-cms/master/cms.gif)
 
+
 ### Markup
 
 ```
